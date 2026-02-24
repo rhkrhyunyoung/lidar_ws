@@ -1,0 +1,25 @@
+/microstrain_inertial_driver:
+  ros__parameters:
+    port: "/dev/ttyACM0"
+    baudrate: 115200
+    
+    # [핵심] GV7은 GPS가 없으므로 PPS 소스를 끕니다.
+    pps_source: 0
+    filter_pps_source: 0
+
+    use_enu_frame: true
+    gpio_config: false
+
+    tf_mode: 0
+    
+    # AHRS 모드 설정
+    use_device_time: false
+    imu_data_rate: 500
+    
+    # GNSS 및 오도메트리 기능 끄기 (에러 방지)
+    filter_enable_gnss_pos_vel_aiding: false
+    filter_enable_gnss_heading_aiding: false
+    filter_enable_altimeter_aiding: false
+    filter_enable_odometer_aiding: false
+    
+    filter_declination_source: 1
