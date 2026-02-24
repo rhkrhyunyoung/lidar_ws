@@ -1,0 +1,1038 @@
+<sdf version='1.7'>
+  <model name='DROK_P'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.01 0.01 -0.02 0 -0 0</pose>
+        <mass>32.22</mass>
+        <inertia>
+          <ixx>0.45</ixx>
+          <ixy>-0.01</ixy>
+          <ixz>-0.02</ixz>
+          <iyy>1.51</iyy>
+          <iyz>0</iyz>
+          <izz>1.86</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      
+      <self_collide>true</self_collide>
+      
+    </link>
+    <joint name='ARM BASE_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.27 0 0.066 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>ARM BASE</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ARM BASE'>
+      <pose relative_to='ARM BASE_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.01 0 -0 0</pose>
+        <mass>0.19</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='ARM BASE_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM BASE.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ARM BASE_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM BASE.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      
+      <self_collide>true</self_collide>
+      
+    </link>
+    <joint name='ARM1_JOINT' type='revolute'>
+      <pose relative_to='ARM BASE'>0 0 0.07 0 -0 0</pose>
+      <parent>ARM BASE</parent>
+      <child>ARM1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ARM1'>
+      <pose relative_to='ARM1_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.06 0 -0 0</pose>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='ARM1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ARM1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ARM2_JOINT' type='revolute'>
+      <pose relative_to='ARM1'>-0.35 -0.00025 0 0 -0 0</pose>
+      <parent>ARM1</parent>
+      <child>ARM2</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ARM2'>
+      <pose relative_to='ARM2_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.23 0 0 0 -0 0</pose>
+        <mass>2.03</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.05</iyy>
+          <iyz>0</iyz>
+          <izz>0.05</izz>
+        </inertia>
+      </inertial>
+      <collision name='ARM2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ARM2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ARM3_JOINT' type='revolute'>
+      <pose relative_to='ARM2'>0.29265 0 0.083467 0 -0 0</pose>
+      <parent>ARM2</parent>
+      <child>ARM3</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ARM3'>
+      <pose relative_to='ARM3_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.18 0 -0.01 0 -0 0</pose>
+        <mass>0.62</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='ARM3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ARM3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ARM4_JOINT' type='revolute'>
+      <pose relative_to='ARM3'>0.038 0 0 0 -0 0</pose>
+      <parent>ARM3</parent>
+      <child>ARM4</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ARM4'>
+      <pose relative_to='ARM4_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.02 0 0 0 -0 0</pose>
+        <mass>0.16</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='ARM4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ARM4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ARM5_JOINT' type='revolute'>
+      <pose relative_to='ARM4'>0.081 0 0 0 -0 0</pose>
+      <parent>ARM4</parent>
+      <child>ARM5</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ARM5'>
+      <pose relative_to='ARM5_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.06 0 0 0 -0 0</pose>
+        <mass>0.53</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='ARM5_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ARM5_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/ARM5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BLF_JOINT' type='revolute'>
+      <pose relative_to='base_link'>-0.275 0.2306 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>BLF</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BLF'>
+      <pose relative_to='BLF_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.05 -0.01 0.06 0 -0 0</pose>
+        <mass>1.07</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='BLF_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BLF.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BLF_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BLF.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BL_JOINT' type='revolute'>
+      <pose relative_to='base_link'>-0.275 0.1836 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>BL</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BL'>
+      <pose relative_to='BL_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.02 0 0 -0 0</pose>
+        <mass>0.56</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='BL_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BL.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BL_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BL.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BRF_JOINT' type='revolute'>
+      <pose relative_to='base_link'>-0.275 -0.2306 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>BRF</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BRF'>
+      <pose relative_to='BRF_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.05 0.01 0.06 0 -0 0</pose>
+        <mass>1.07</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='BRF_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BRF.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BRF_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BRF.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BR_JOINT' type='revolute'>
+      <pose relative_to='base_link'>-0.275 -0.1836 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>BR</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BR'>
+      <pose relative_to='BR_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.02 0 0 -0 0</pose>
+        <mass>0.56</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='BR_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BR.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BR_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/BR.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FLF_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.275 0.1836 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>FLF</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FLF'>
+      <pose relative_to='FLF_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.06 -0.01 0.03 0 -0 0</pose>
+        <mass>1.16</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='FLF_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FLF.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FLF_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FLF.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FL_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.275 0.1836 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>FL</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FL'>
+      <pose relative_to='FL_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.34</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='FL_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FL.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FL_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FL.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FRF_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.275 -0.2306 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>FRF</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FRF'>
+      <pose relative_to='FRF_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.06 0.01 0.03 0 -0 0</pose>
+        <mass>1.16</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='FRF_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FRF.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FRF_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FRF.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FR_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.275 -0.1836 -0.03 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>FR</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FR'>
+      <pose relative_to='FR_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.34</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='FR_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FR.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FR_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/FR.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L1_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.13 0.184 -0.074 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>L1</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L1'>
+      <pose relative_to='L1_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.08</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='L1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/L1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/L1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L2_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0 0.184 -0.074 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>L2</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L2'>
+      <pose relative_to='L2_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.08</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='L2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/L2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/L2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='L3_JOINT' type='revolute'>
+      <pose relative_to='base_link'>-0.13 0.184 -0.074 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>L3</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L3'>
+      <pose relative_to='L3_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.08</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='L3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/L3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='L3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/L3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R1_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0.13 -0.184 -0.074 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>R1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R1'>
+      <pose relative_to='R1_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.08</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='R1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/R1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/R1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R2_JOINT' type='revolute'>
+      <pose relative_to='base_link'>0 -0.184 -0.074 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>R2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R2'>
+      <pose relative_to='R2_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.08</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='R2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/R2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/R2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='R3_JOINT' type='revolute'>
+      <pose relative_to='base_link'>-0.13 -0.184 -0.074 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>R3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R3'>
+      <pose relative_to='R3_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.08</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name='R3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/R3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='R3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://DROK_P/meshes/R3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="DROK_P">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.01 0.01 -0.02"
+        rpy="0 0 0" />
+      <mass
+        value="32.22" />
+      <inertia
+        ixx="0.45"
+        ixy="-0.01"
+        ixz="-0.02"
+        iyy="1.51"
+        iyz="0"
+        izz="1.86" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.34" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.275 -0.1836 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="FL">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.34" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.275 0.1836 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="BR">
+    <inertial>
+      <origin
+        xyz="0 -0.02 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.56" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.275 -0.1836 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BR" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="BL">
+    <inertial>
+      <origin
+        xyz="0 0.02 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.56" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.275 0.1836 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BL" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="FRF">
+    <inertial>
+      <origin
+        xyz="0.06 0.01 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="1.16" />
+      <inertia
+        ixx="0.01"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FRF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FRF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRF_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.275 -0.2306 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FRF" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="FLF">
+    <inertial>
+      <origin
+        xyz="0.06 -0.01 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="1.16" />
+      <inertia
+        ixx="0.01"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FLF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/FLF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLF_JOINT"
+    type="revolute">
+    <origin
+      xyz="0.275 0.1836 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FLF" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BRF">
+    <inertial>
+      <origin
+        xyz="-0.05 0.01 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="1.07" />
+      <inertia
+        ixx="0.01"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BRF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BRF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRF_JOINT"
+    type="revolute">
+    <origin
+      xyz="-0.275 -0.2306 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BRF" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BLF">
+    <inertial>
+      <origin
+        xyz="-0.05 -0.01 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="1.07" />
+      <inertia
+        ixx="0.01"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BLF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/BLF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLF_JOINT"
+    type="revolute">
+    <origin
+      xyz="-0.275 0.2306 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BLF" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.08" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.13 0.184 -0.074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="L2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.08" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0.184 -0.074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="L3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.08" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.13 0.184 -0.074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="R1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.08" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/R1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/R1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R1_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.13 -0.184 -0.074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="R2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.08" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/R2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/R2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R2_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 -0.184 -0.074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="R3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.08" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/R3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/R3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R3_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.13 -0.184 -0.074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ARM BASE">
+    <inertial>
+      <origin
+        xyz="0 0 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.19" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM BASE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM BASE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ARM BASE_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.27 0 0.066"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ARM BASE" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="ARM1">
+    <inertial>
+      <origin
+        xyz="0 0 -0.06"
+        rpy="0 0 0" />
+      <mass
+        value="1.37" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ARM1_JOINT"
+    type="revolute">
+    <origin
+      xyz="0 0 0.07"
+      rpy="0 0 0" />
+    <parent
+      link="ARM BASE" />
+    <child
+      link="ARM1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ARM2">
+    <inertial>
+      <origin
+        xyz="0.23 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.03" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0.05"
+        iyz="0"
+        izz="0.05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ARM2_JOINT"
+    type="revolute">
+    <origin
+      xyz="-0.35 -0.00025005 0"
+      rpy="0 0 0" />
+    <parent
+      link="ARM1" />
+    <child
+      link="ARM2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ARM3">
+    <inertial>
+      <origin
+        xyz="-0.18 0 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.62" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ARM3_JOINT"
+    type="revolute">
+    <origin
+      xyz="0.29265 0 0.083467"
+      rpy="0 0 0" />
+    <parent
+      link="ARM2" />
+    <child
+      link="ARM3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ARM4">
+    <inertial>
+      <origin
+        xyz="-0.02 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.16" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ARM4_JOINT"
+    type="revolute">
+    <origin
+      xyz="0.038 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ARM3" />
+    <child
+      link="ARM4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ARM5">
+    <inertial>
+      <origin
+        xyz="-0.06 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.53" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.20392 0.20392 0.20392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fast_lio/meshes/ARM5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ARM5_JOINT"
+    type="revolute">
+    <origin
+      xyz="0.081 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ARM4" />
+    <child
+      link="ARM5" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
