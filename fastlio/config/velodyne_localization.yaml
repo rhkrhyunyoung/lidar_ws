@@ -1,0 +1,51 @@
+/**:
+    ros__parameters:
+        localization_mode: true           # true면 위치추정 모드, false면 매핑 모드
+        pcd_path: "/mnt/data/map_result/my_fast_lio_map.pcd" # 불러올 지도의 절대 경로
+        # ---------------------------------------
+
+        feature_extract_enable: false
+        point_filter_num: 3
+        max_iteration: 20
+        filter_size_surf: 0.5
+        filter_size_map: 0.5
+        cube_side_length: 1000.0
+        runtime_pos_log_enable: false
+        map_file_path: "/mnt/data/map_result/my_fast_lio_map_new.pcd" # 이건 저장할 때 경로
+
+        common:
+            lid_topic:  "/velodyne_points"
+            imu_topic:  "/imu/data"
+            time_sync_en: true
+            time_offset_lidar_to_imu: 0.0
+
+        preprocess:
+            lidar_type: 2                # Velodyne
+            scan_line: 16
+            scan_rate: 10
+            timestamp_unit: 0
+            blind: 0.2
+
+        mapping:
+            acc_cov: 0.1
+            gyr_cov: 0.1
+            b_acc_cov: 0.0001
+            b_gyr_cov: 0.0001
+            fov_degree:    360.0
+            det_range:     100.0
+            extrinsic_est_en:  false      # Localization 시에는 반드시 false 권장
+            extrinsic_T: [ 0.0, 0.0, 0.04 ]
+            extrinsic_R: [ 1., 0., 0., 
+                          0., 1., 0., 
+                           0., 0., 1. ] 
+
+        publish:
+            path_en:  true
+            scan_publish_en:  true
+            dense_publish_en: true
+            scan_bodyframe_pub_en: true
+            map_en: true                  # 로드된 지도를 RViz에서 보려면 true 필수
+
+        pcd_save:
+            pcd_save_en: false            # Localization 모드에서는 저장할 필요 없으니 false
+            interval: -1
